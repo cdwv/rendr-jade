@@ -15,6 +15,11 @@ module.exports = function(jade) {
   function extendTemplate(template) {
     var extendedTemplate = function(locals) {
       _.each(jade.helpers, function(fn, fnName) {
+        if(! _.isFunction(fn)( {
+          fn.locals = locals;
+          locals[fnName] = fn;
+          return;
+        }
         locals[fnName] = fn.bind(locals);
       });
       return template.call(locals, locals);
