@@ -11,9 +11,9 @@
     "url": "http://github.com/change/rendr-jade.git"
   },
   "dependencies": {
-    "underscore": "~1.4.4",
-    "jade": "~1.1.5",
-    "rendr": ">=0.4.9"
+    "underscore": "~1.8.0",
+    "jade": "~1.11.0",
+    "rendr": ">=0.5.0"
   },
   "keywords": [
     "rendr",
